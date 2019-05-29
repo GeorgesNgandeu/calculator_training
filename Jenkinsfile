@@ -3,6 +3,10 @@ pipeline {
      triggers {
           pollSCM('* * * * *')
      }
+     environment {
+        USERNAME = credentials('georgesngandeu')
+        PASSWORD = credentials('Y@mdeuNaom1')
+    }
      stages {
           stage("Compile") {
                steps {
